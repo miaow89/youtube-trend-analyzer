@@ -7,6 +7,7 @@ export default defineConfig({
   // GitHub Pages 저장소 이름(youtube-trend-analyzer)을 base 경로로 설정합니다.
   base: '/youtube-trend-analyzer/',
   define: {
-    'process.env': {}
+    // 빌드 타임의 process.env.API_KEY를 클라이언트 코드에 주입합니다.
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
   }
 });
