@@ -25,6 +25,7 @@ export interface YouTubeVideo {
   performanceGrade?: 'excellent' | 'good' | 'needs-improvement';
 }
 
+// Added TrendAnalysis interface to fix import errors in services/geminiService.ts and components/AnalysisView.tsx
 export interface TrendAnalysis {
   summary: string;
   keyThemes: {
@@ -40,8 +41,6 @@ export interface AppState {
   isLoading: boolean;
   error: string | null;
   youtubeApiKey: string;
-  analysis: TrendAnalysis | null;
-  isAnalyzing: boolean;
   filter: 'all' | 'excellent' | 'good' | 'needs-improvement';
   searchQuery: string;
   sortConfig: {
