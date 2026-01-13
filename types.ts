@@ -25,7 +25,7 @@ export interface YouTubeVideo {
   performanceGrade?: 'excellent' | 'good' | 'needs-improvement';
 }
 
-// Added TrendAnalysis interface to fix import errors in services/geminiService.ts and components/AnalysisView.tsx
+// Added TrendAnalysis interface to satisfy dependencies in geminiService and AnalysisView
 export interface TrendAnalysis {
   summary: string;
   keyThemes: {

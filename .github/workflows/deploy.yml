@@ -21,7 +21,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # package-lock.json이 없으므로 cache 옵션을 제거합니다.
+          # 만약 로컬에서 npm install을 실행하여 package-lock.json이 생성되었다면 다시 추가해도 됩니다.
 
       - name: Install dependencies
         run: npm install
