@@ -48,6 +48,15 @@ export const analyzeYouTubeTrends = async (videos: YouTubeVideo[]): Promise<Tren
     }
   });
 
-  // Fix: response.text is a property, not a method
-  return JSON.parse(response.text.trim()) as TrendAnalysis;
+  // Handle cases where response.text might be undefined to satisfy TypeScript strict null checks
+  const text = response.text;
+  if (!text) {
+    throw new Error('AI 분석 결과를 생성하는 데 실패했습니다. (응답 텍스트 없음)');
+  }
+
+  try {
+    return JSON.parse(text.trim()) as TrendAnalysis;
+  } catch (e) {
+    throw new Error('AI 응답을 파싱하는 중 오류가 발생했습니다.');
+  }
 };
