@@ -34,7 +34,8 @@
 </head>
 <body>
     <div id="root"></div>
-    <!-- 리액트 앱의 시작점인 index.tsx를 연결합니다. -->
-    <script type="module" src="/index.tsx"></script>
+    <!-- 상대 경로(./)를 사용하여 GitHub Pages 하위 디렉토리 환경에서도 올바르게 로드되도록 합니다. -->
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
