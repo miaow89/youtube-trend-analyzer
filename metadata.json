@@ -1,0 +1,6 @@
+
+{
+  "name": "TrendPulse: YouTube Trend Analyzer",
+  "description": "A powerful dashboard that analyzes YouTube trending videos using the YouTube Data API and leverages Gemini AI to extract deep insights, common themes, and engagement patterns.",
+  "requestFramePermissions": []
+}
